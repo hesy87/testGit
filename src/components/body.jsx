@@ -12,6 +12,7 @@ const Body = () => {
   };
   return (
     <div id="body" className={styles.body}>
+      <h1>{}</h1>
       <h1 id="text">Click the Button Bellow</h1>
       <button
         onClick={() => {

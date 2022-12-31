@@ -1,11 +1,19 @@
 import "./App.css";
 import Body from "./components/body";
+import Navbar from "./components/navbar";
+import { useState, createContext } from "react";
 
-function App() {
+const userContext = createContext();
+
+const navList = ["Home", "About", "Contact"];
+function App(props) {
+  const [header, setHeader] = useState();
+  console.log(header);
   return (
-    <>
-      <Body />
-    </>
+    <userContext.Provider value={{ header, setHeader }}>
+      <Navbar items={navList} />
+      <Body header={header} />
+    </userContext.Provider>
   );
 }
 

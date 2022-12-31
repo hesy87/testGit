@@ -8,10 +8,11 @@ const Body = () => {
       ? (document.getElementById("body").style.background = "gold")
       : (document.getElementById("body").style.background = "white");
     setCheckBackground(!checkBackgound);
+    document.getElementById('text').innerHTML= "Clicked"
   };
   return (
     <div id="body" className={styles.body}>
-      <h1>Click the Button Bellow</h1>
+      <h1 id="text">Click the Button Bellow</h1>
       <button
         onClick={() => {
           ChangeColorHandler();
